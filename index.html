@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>עוזי בראל · יציאה מהתמכרות בשיטות NLP, CBT וריברסינג</title>
-<meta name="description" content="עוזי בראל — מטפל, יועץ ומלווה תהליכי יציאה מהתמכרות והתפתחות אישית. שילוב של NLP, פסיכותרפיה, CBT, הילד הפנימי וריברסינג." />
-<meta name="theme-color" content="#0b0716" />
+<title>עוזי בראל · ליווי יציאה מהתמכרות, טראומה ומשברי חיים</title>
+<meta name="description" content="עוזי בראל — מטפל ומלווה עם ניסיון אישי ממקום של גמילות. פסיכותרפיה, CBT, NLP, 12 הצעדים, טיפול ממוקד התמכרויות וטראומה, אימון אישי והנחיית קבוצות." />
+<meta name="theme-color" content="#051c28" />
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
@@ -27,7 +27,7 @@
       "inLanguage": "he",
       "provider": { "@id": "https://uzibarel.co.il/#business" },
       "name": "ליווי תהליכי יציאה מהתמכרות והתפתחות אישית",
-      "description": "טיפול ותמיכה בהתמכרויות ובמשברי חיים בשילוב NLP, פסיכותרפיה, CBT, ריברסינג והילד הפנימי."
+      "description": "טיפול וליווי בהתמכרויות, טראומה ומשברי חיים — פסיכותרפיה, CBT, NLP, טיפול ממוקד, 12 הצעדים, ריברסינג, הילד הפנימי, אימון אישי והנחיית קבוצות."
     }
   ]
 }
@@ -78,6 +78,24 @@
     --violet:#69b38e;--lilac:#a5d4bc;
     --glow-a:rgba(105,179,142,.45);--glow-b:rgba(214,184,122,.2);
   }
+  /* royal · turquoise · עמוק ובולט */
+  :root[data-palette="depth"]{
+    --bg-0:#051b2e;--bg-1:#0a2744;--bg-2:#0f3550;
+    --ink:#e9fbff;--ink-soft:#97d4e8;--ink-dim:#5aa3bc;
+    --line:rgba(151,212,232,.18);
+    --accent:#2dd4bf;--accent-soft:#5eead4;
+    --violet:#3b82f6;--lilac:#7dd3fc;
+    --glow-a:rgba(45,212,191,.5);--glow-b:rgba(59,130,246,.32);
+  }
+  /* רויאל · טורקיז · עומק חי */
+  :root[data-palette="lagoon"]{
+    --bg-0:#051c28;--bg-1:#0b2f45;--bg-2:#0f4560;
+    --ink:#e8fbff;--ink-soft:#9bd4e8;--ink-dim:#5a93ac;
+    --line:rgba(155,212,232,.16);
+    --accent:#2ec4b6;--accent-soft:#7ee8dc;
+    --violet:#5b7cff;--lilac:#8ec9ff;
+    --glow-a:rgba(46,196,182,.52);--glow-b:rgba(91,124,255,.32);
+  }
 
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
@@ -110,7 +128,7 @@
     position:fixed;top:0;left:0;right:0;z-index:50;
     padding:18px 48px;display:flex;align-items:center;justify-content:space-between;
     backdrop-filter:blur(14px);
-    background:linear-gradient(to bottom, rgba(20,11,24,.65), rgba(20,11,24,0));
+    background:linear-gradient(to bottom, color-mix(in srgb, var(--bg-0) 72%, transparent), transparent);
   }
   .logo{display:flex;align-items:center;gap:10px}
   .logo-mark{
@@ -209,10 +227,10 @@
     position:relative;border-radius:24px;overflow:hidden;
     border:1px solid var(--line);
     background:
-      radial-gradient(ellipse at top, rgba(201,168,106,.08), transparent 60%),
-      linear-gradient(180deg, rgba(243,236,255,.97), rgba(231,211,163,.92));
+      radial-gradient(ellipse at top, color-mix(in srgb, var(--accent) 14%, transparent), transparent 58%),
+      linear-gradient(180deg, color-mix(in srgb, var(--lilac) 12%, var(--bg-1)), color-mix(in srgb, var(--accent) 18%, var(--bg-2)));
     padding:24px;
-    box-shadow:0 30px 80px -30px rgba(0,0,0,.6), 0 0 0 1px var(--line);
+    box-shadow:0 30px 80px -30px rgba(0,0,0,.55), 0 0 0 1px var(--line);
   }
   .tree-image img{width:100%;height:auto;display:block;border-radius:14px}
   .tree-image .tree-fallback{
@@ -266,7 +284,7 @@
     background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
     padding:48px 40px;transition:.4s;position:relative;
   }
-  .pain-card:hover{background:linear-gradient(180deg, rgba(198,127,212,.08), rgba(255,255,255,0))}
+  .pain-card:hover{background:linear-gradient(180deg, rgba(59,130,246,.10), rgba(45,212,191,.06), rgba(255,255,255,0))}
   .pain-num{
     font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.22em;color:var(--accent);
     margin-bottom:18px;
@@ -290,7 +308,7 @@
     background:var(--bg-1);padding:48px 36px;display:flex;flex-direction:column;min-height:280px;
     transition:.4s;
   }
-  .method-col:hover{background:linear-gradient(180deg, rgba(198,127,212,.08), var(--bg-1))}
+  .method-col:hover{background:linear-gradient(180deg, rgba(45,212,191,.10), rgba(59,130,246,.06), var(--bg-1))}
   .method-num{
     font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.22em;color:var(--accent);margin-bottom:24px;
   }
@@ -444,7 +462,7 @@
     position:relative;
     border:1px solid var(--line);border-radius:32px;
     padding:80px 64px;overflow:hidden;
-    background:linear-gradient(135deg, rgba(198,127,212,.10), rgba(255,179,122,.06));
+    background:linear-gradient(135deg, rgba(45,212,191,.14), rgba(59,130,246,.10));
   }
   .final-box::before{
     content:"";position:absolute;inset:-50%;
@@ -530,26 +548,29 @@
     <li><a href="#about">עליי</a></li>
     <li><a href="#faq">שאלות</a></li>
   </ul>
-  <a href="https://wa.me/972547000609?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%95%D7%96%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A4%D7%92%D7%99%D7%A9%D7%94" target="_blank" rel="noopener" class="nav-cta plausible-event-name=Lead">קבעו פגישת היכרות ←</a>
+  <a href="https://wa.me/972547000609?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%95%D7%96%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%AA%D7%99%D7%90%D7%95%D7%9D" target="_blank" rel="noopener" class="nav-cta plausible-event-name=Lead">פנייה בוואטסאפ ←</a>
 </nav>
 
 <!-- ========== HERO ========== -->
 <section class="hero">
   <div class="hero-orb"></div>
   <div class="wrap">
-    <div class="eyebrow mono">עוזי בראל · מטפל יועץ ומלווה</div>
+    <div class="eyebrow mono">עוזי בראל · מכור נקי · מלווה מתוך ניסיון אישי</div>
     <h1>
-      הבטחת שזאת<br>
-      <em>הפעם האחרונה</em>.
+      ההתמכרות, ההרס העצמי,<br>
+      טראומות ילדות שלא טופלו<br>
+      ומשברי החיים — <em>רק הענפים</em>.
     </h1>
     <p class="lede">
-      אתה לא חלש. אתה <strong>קוצץ עלים מעץ ששורשיו עמוקים יותר</strong> ממה שניסית עד היום לגעת.
-      ההתמכרות היא לא הבעיה — היא הענף. אני עוזי בראל, ואני עובד עם כל שכבות העץ:
-      <strong>הפיזית, הנפשית, והרוחנית.</strong>
+      <strong>השורש האמיתי יושב עמוק יותר.</strong> כל עוד לא מטפלים בשורש, אותם ענפים יצמחו מחדש שוב ושוב.
+      ההתמכרות יושבת עמוק יותר ממה שנראה מבחוץ — ואם לא מטפלים בבעיה מהשורש, אותם דפוסים יחזרו שוב ושוב, גם אם בכל פעם הם יופיעו אחרת.
+    </p>
+    <p class="lede" style="margin-top:20px;max-width:58ch">
+      אני <strong>מכור נקי</strong>, עם ניסיון אישי אמיתי — כזה ש<strong>עבר דרך וגם ממשיך לעבור תהליכים בעצמי</strong>, לא רק מלווה אותם מעל הקו. זה חלק מרכזי בחיבור שלי לתחום וביכולת <strong>ללוות אנשים מהמקום הזה</strong> — עם כל שכבות העץ: הפיזית, הנפשית והרוחנית.
     </p>
     <div class="hero-cta-row">
-      <a href="https://wa.me/972547000609?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%95%D7%96%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A4%D7%92%D7%99%D7%A9%D7%94" target="_blank" rel="noopener" class="btn btn-primary plausible-event-name=Lead">
-        <span>שיחת היכרות בוואטסאפ</span>
+      <a href="https://wa.me/972547000609?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%95%D7%96%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%AA%D7%99%D7%90%D7%95%D7%9D" target="_blank" rel="noopener" class="btn btn-primary plausible-event-name=Lead">
+        <span>שלחו הודעה בוואטסאפ</span>
         <span class="arrow">←</span>
       </a>
       <div class="stat-pill">
@@ -559,8 +580,8 @@
     </div>
     <div class="hero-meta">
       <span>יחידים · זוגות · משפחות</span>
-      <span>שיחת היכרות חינם</span>
-      <span>פרונטלית או אונליין</span>
+      <span>פנייה ראשונית בוואטסאפ בלבד</span>
+      <span>אין שיחת היכרות חינם</span>
     </div>
   </div>
 </section>
@@ -570,8 +591,8 @@
   <div class="wrap">
     <div class="tree-head">
       <div class="eyebrow mono" style="justify-content:center">עץ ההתמכרות</div>
-      <h2>ההתמכרות שאתה רואה<br>היא רק <em>העלים</em>.</h2>
-      <p>החומר, ההרגל, ההתפרצות — כל מה שאתה מנסה לעצור — זה הענפים שמעל לאדמה. השורש האמיתי יושב עמוק יותר. כל עוד הוא לא מטופל, הענפים תמיד יצמחו מחדש.</p>
+      <h2>מה שרואים בחוץ<br>זה עדיין רק <em>הענפים</em>.</h2>
+      <p>ההתמכרות, ההרס העצמי, טראומות ילדות שלא טופלו ומשברי החיים — כולם מתגלים למעלה, מעל האדמה. השורש האמיתי יושב עמוק יותר; כל עוד הוא לא מטופל, אותם ענפים יצמחו שוב, לפעמים בצורה חדשה.</p>
     </div>
     <div class="tree-grid">
       <div class="tree-image">
@@ -649,8 +670,8 @@
   <div class="wrap">
     <div class="method-head">
       <div class="eyebrow mono" style="justify-content:center">השיטות שאני עובד איתן</div>
-      <h2>חמש שיטות. <em>אדם אחד</em>.<br>תהליך שמדבר אל מי שאתה.</h2>
-      <p>לא כל בעיה דורשת את אותו הכלי. בכל פגישה אנחנו בוחרים את השיטה שהכי מתאימה לרגע שלך — ולפעמים משלבים שתיים-שלוש ביחד. זה לא תבנית. זו עבודה אישית.</p>
+      <h2>מגוון שיטות. <em>אדם אחד</em>.<br>תהליך שמדבר אל מי שאתה.</h2>
+      <p>לא כל בעיה דורשת את אותו הכלי. בכל פגישה אנחנו בוחרים את מה שהכי מתאים לרגע שלך — ולפעמים משלבים כמה כלים ביחד. זה לא תבנית. זו עבודה אישית.</p>
     </div>
 
     <div class="method-cols">
@@ -668,6 +689,31 @@
         <div class="method-num">03 / נשימה ועומק</div>
         <h3>ריברסינג והילד הפנימי</h3>
         <p>נשימה תודעתית מקשרת + עבודה עם הילד הפנימי. שחרור של מטענים שיושבים בגוף שנים, וחזרה למקום שבו הפגיעה הראשונית התחילה — כדי לרפא אותה מהיסוד.</p>
+      </div>
+      <div class="method-col">
+        <div class="method-num">04 / שיח ועומק</div>
+        <h3>פסיכותרפיה</h3>
+        <p>מרחב שיח מעמיק ומכבד, שמייצר קשר וביטחון לעבור דרך תוכן, רגש והיסטוריה — בקצב שנכון לך וללא "לדחוף חתיכות".</p>
+      </div>
+      <div class="method-col">
+        <div class="method-num">05 / מיקוד</div>
+        <h3>טיפול ממוקד התמכרויות וטראומה</h3>
+        <p>עבודה שמחברת בין התנהגות, הרגל, כאב וזיכרון גוף — כדי לא לטפל רק בסימפטום שנראה היום, אלא במה שמזין אותו מבפנים.</p>
+      </div>
+      <div class="method-col">
+        <div class="method-num">06 / שביל משותף</div>
+        <h3>12 הצעדים</h3>
+        <p>שילוב עקרונות ומסגרת של שנים-עשר הצעדים כשמתאים — קהילה, אחריות, ומעטפת שמזכירה שאי אפשר לעשות הכול לבד.</p>
+      </div>
+      <div class="method-col">
+        <div class="method-num">07 / תנועה ומעשה</div>
+        <h3>אימון אישי</h3>
+        <p>חיבור בין גוף, משמעת רכה ומטרות יומיומיות — כדי לבנות עקביות, ביטחון ויכולת להחזיק שינוי גם מחוץ לחדר הטיפולים.</p>
+      </div>
+      <div class="method-col">
+        <div class="method-num">08 / קבוצה</div>
+        <h3>הנחיית קבוצות</h3>
+        <p>ליווי קבוצות ותהליכים קבוצתיים — כשהשדה המשותף עוזר לשבור בדידות, בושה ודפוסים של "רק אני".</p>
       </div>
     </div>
   </div>
@@ -687,11 +733,11 @@
 <section class="big-stat">
   <div class="wrap">
     <div class="big-stat-grid">
-      <div class="big-stat-num">5</div>
+      <div class="big-stat-num">8</div>
       <div class="big-stat-text">
-        <div class="eyebrow mono">חמש שיטות מוכחות</div>
-        <h2>NLP · פסיכותרפיה · CBT ·<br>ריברסינג · <em>הילד הפנימי</em></h2>
-        <p>המגוון הזה הוא לא קישוט. זו הסיבה שתהליך אצלי עובד גם אם כבר ניסית לפני. כל שיטה ניגשת לזווית אחרת — קוגניטיבית, גופנית, רגשית, תת-מודעת — ושילוב נכון ביניהן מכסה את האדם השלם, לא רק את הסימפטום.</p>
+        <div class="eyebrow mono">מגוון כלים מוכחים</div>
+        <h2>פסיכותרפיה · CBT · NLP · ריברסינג ·<br>הילד הפנימי · <em>ועוד</em></h2>
+        <p>יחד עם טיפול ממוקד בהתמכרויות וטראומה, עבודה בתוך מסגרת שנים-עשר הצעדים כשמתאים, אימון אישי והנחיית קבוצות — אפשר לגשת לאדם שלם, לא רק לסימפטום שמטריד היום. השילוב נבחר לפי מי שאתה ולפי השורש, לא לפי אופנה.</p>
       </div>
     </div>
   </div>
@@ -722,20 +768,20 @@
     <div class="flow-head">
       <div class="eyebrow mono" style="justify-content:center">איך נראה תהליך הליווי</div>
       <h2>ארבעה שלבים <em>ברורים</em> —<br>בלי הפתעות, בלי לחץ, בקצב שלך.</h2>
-      <p>כל מטופל מקבל תהליך אישי. אין כאן תבנית — יש כאן עבודה.</p>
+      <p>כל מטופל מקבל תהליך אישי. אין כאן תבנית — יש כאן עבודה. <strong>הפנייה הראשונית</strong> מתבצעת בוואטסאפ בלבד.</p>
     </div>
     <div class="flow-steps">
       <div class="step">
         <div class="step-glyph"></div>
         <div class="step-num">שלב 01</div>
-        <h3>שיחת היכרות</h3>
-        <p>שיחה ראשונית בוואטסאפ או בטלפון. אתה מספר איפה אתה ומה הביא אותך. בלי טפסים, בלי שאלוני אבחון. אם אני לא האדם הנכון בשבילך — אגיד לך את זה ישר.</p>
+        <h3>פנייה ראשונית בוואטסאפ</h3>
+        <p>הפנייה הראשונית נעשית בוואטסאפ בלבד — קצרה, ישירה, בלי טפסים ושאלוני אבחון. חשוב לי שזה יהיה ברור: <strong>אין שיחת היכרות חינם</strong>. אחרי ההודעה נתקדם לתיאום פגישה בתשלום ולתהליך, כשזה מתאים לשני הצדדים. אם אני לא האדם הנכון בשבילך — אגיד לך את זה ישר.</p>
       </div>
       <div class="step">
         <div class="step-glyph"></div>
         <div class="step-num">שלב 02</div>
         <h3>פגישה ראשונה</h3>
-        <p>פגישה פרונטלית או אונליין. מבינים יחד מה השיטה הראשונה שמתאימה — CBT, NLP, ריברסינג או הילד הפנימי — ובונים את צורת העבודה שלך.</p>
+        <p>פגישה פרונטלית או אונליין. מבינים יחד מה הכלי הראשון שמתאים — CBT, NLP, פסיכותרפיה, ריברסינג, הילד הפנימי, מסגרת שנים-עשר הצעדים, אימון אישי או קבוצה — ובונים את צורת העבודה שלך.</p>
       </div>
       <div class="step">
         <div class="step-glyph"></div>
@@ -764,14 +810,14 @@
       </div>
       <div>
         <div class="eyebrow mono">מי זה עוזי</div>
-        <h2>מטפל בהתמכרויות.<br><em>מלווה לחיים.</em></h2>
-        <p>שמי עוזי בראל. אני מלווה אנשים שמתמודדים עם התמכרויות, משברי חיים, וטראומות שלא מרפות. הגעתי לתחום הזה בדרך הארוכה — שנים של עבודה, נפילה, וקימה — וכל פעם שהתבוננתי לאחור הבנתי ששום שינוי אמיתי לא קרה לי דרך ספר או הרצאה. הוא קרה דרך אנשים שראו אותי כשלא יכולתי לראות את עצמי.</p>
-        <p>למדתי NLP, התמחיתי ב-CBT, התעמקתי בריברסינג ובעבודת הילד הפנימי. כל שיטה לימדה אותי משהו אחר — וביחד הן הפכו את הליווי שלי למשהו שלם, לא חלקי.</p>
+        <h2>מכור נקי.<br><em>מלווה מהשטח הפנימי.</em></h2>
+        <p>שמי עוזי בראל. אני <strong>מכור נקי</strong> — לא תיאוריה מהספרים אלא חיים שעוברים דרך הגוף. אני ממשיך לעבור תהליכים בעצמי, וזה משהו שאני לא מסתיר: זה מניע אותי וזה נותן לי יכולת אמיתית ללוות אנשים <strong>מהמקום הזה</strong>, לא מלמעלה.</p>
+        <p>אני מלווה אנשים שמתמודדים עם התמכרויות, משברי חיים וטראומות שלא מרפות. למדתי NLP, התמחיתי ב-CBT, התעמקתי בריברסינג, בעבודת הילד הפנימי, בפסיכותרפיה וטיפול ממוקד, בעבודה עם שנים-עשר הצעדים, באימון אישי ובהנחיית קבוצות. כל כלי לימד אותי משהו אחר — וביחד הם מאפשרים לי לגעת בשורש ולא רק בענף.</p>
         <p>מעבר לכל הכלים — מה שאני מביא לחדר הוא ההבנה שמולך יושב אדם, לא אבחנה. שיש לך סיפור, וכואב לך, ואתה רוצה משהו אחר. <strong>השאלה היחידה שצריך לענות עליה עכשיו היא — האם אתה מוכן.</strong></p>
         <div class="about-stats">
           <div class="about-stat">
-            <div class="n">5</div>
-            <div class="l">שיטות טיפול בשילוב אישי</div>
+            <div class="n">8+</div>
+            <div class="l">כיווני טיפול וליווי</div>
           </div>
           <div class="about-stat">
             <div class="n">3</div>
@@ -802,6 +848,10 @@
           <div class="faq-answer">לחלוטין. כל מה שנאמר בחדר נשאר בחדר. דיסקרטיות מלאה היא תנאי בסיס לכל תהליך — ובמיוחד כשמדובר בנושאים רגישים כמו התמכרות, יחסים זוגיים או משברים אישיים.</div>
         </details>
         <details class="faq-item">
+          <summary><h3>האם יש שיחת היכרות חינם?</h3><span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">לא. חשוב לי שזה יהיה שקוף מההתחלה. <strong>אין שיחת היכרות חינם.</strong> הפנייה הראשונית נעשית בוואטסאפ בלבד, ומשם — אם יש התאמה — מתקדמים לתיאום פגישה בתשלום ולתהליך.</div>
+        </details>
+        <details class="faq-item">
           <summary><h3>אני בכלל לא בטוח שזו "התמכרות" — זה עדיין רלוונטי?</h3><span class="faq-toggle">+</span></summary>
           <div class="faq-answer">כן. רוב האנשים שמגיעים אליי לא מגדירים את עצמם "מכורים". הם פשוט מרגישים שמשהו לא עובד — דפוס שחוזר, מצב רוח שלא מרפה, יחסים שלא מתפתחים. השאלה היא לא ההגדרה — השאלה היא האם זה מפריע לך לחיות.</div>
         </details>
@@ -811,7 +861,7 @@
         </details>
         <details class="faq-item">
           <summary><h3>מה ההבדל בין NLP, CBT וריברסינג?</h3><span class="faq-toggle">+</span></summary>
-          <div class="faq-answer">CBT עובד עם המחשבות וההתנהגויות בהווה. NLP עובד עם השפה הפנימית והתבניות הלא-מודעות. ריברסינג עובד דרך הנשימה והגוף. אצלי הם משלימים אחד את השני — אנחנו בוחרים מה שמתאים לרגע שלך.</div>
+          <div class="faq-answer">CBT עובד עם המחשבות וההתנהגויות בהווה. NLP עובד עם השפה הפנימית והתבניות הלא-מודעות. ריברסינג עובד דרך הנשימה והגוף. בנוסף משתמשים כשצריך בפסיכותרפיה, במסגרת שנים-עשר הצעדים, באימון אישי, בהנחיית קבוצות ובטיפול ממוקד התמכרויות וטראומה — הכול לפי מה שנכון לך.</div>
         </details>
         <details class="faq-item">
           <summary><h3>גם בני זוג של מכורים יכולים לפנות?</h3><span class="faq-toggle">+</span></summary>
@@ -827,7 +877,7 @@
         </details>
         <details class="faq-item">
           <summary><h3>איך מתחילים?</h3><span class="faq-toggle">+</span></summary>
-          <div class="faq-answer">שולחים לי הודעה בוואטסאפ. אני חוזר תוך 24 שעות, אנחנו מתאמים פגישת היכרות, ומשם — אתה מחליט.</div>
+          <div class="faq-answer">שולחים לי <strong>הודעה בוואטסאפ בלבד</strong> — כך אני מנהל את הפנייה הראשונית. אחזור תוך עד 24 שעות, נסכם את המשך הדרך, ואם יש התאמה נקבע פגישה בתשלום. <strong>אין שיחת היכרות חינם.</strong> משם אתה מחליט איך להמשיך.</div>
         </details>
       </div>
     </div>
@@ -840,13 +890,14 @@
     <div class="final-box">
       <div class="eyebrow mono" style="justify-content:center">הצעד הראשון</div>
       <h2>לא צריך לעשות את זה<br><em>לבד</em>.</h2>
-      <p>שלח הודעה בוואטסאפ. אחזור אליך תוך 24 שעות, נקבע שיחת היכרות קצרה — ומשם תחליט אתה אם וכיצד להמשיך. דיסקרטיות מלאה. בלי מחויבות.</p>
-      <a href="https://wa.me/972547000609?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%95%D7%96%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A4%D7%92%D7%99%D7%A9%D7%94" target="_blank" rel="noopener" class="btn btn-primary plausible-event-name=Lead">
+      <p>שלחו הודעה בוואטסאפ — זו דרך <strong>הפנייה הראשונית</strong> שלי. אחזור אליך תוך עד 24 שעות, נסכם את ההמשך, ואם יש התאמה נקבע פגישה בתשלום. <strong>אין שיחת היכרות חינם.</strong> דיסקרטיות מלאה; אין התחייבות עד שמתאמים פגישה.</p>
+      <a href="https://wa.me/972547000609?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%95%D7%96%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%AA%D7%99%D7%90%D7%95%D7%9D" target="_blank" rel="noopener" class="btn btn-primary plausible-event-name=Lead">
         <span>שלח הודעה בוואטסאפ</span>
         <span class="arrow">←</span>
       </a>
       <div class="final-trust">
-        <span>שיחת היכרות חינם</span>
+        <span>פנייה ראשונית בוואטסאפ</span>
+        <span>אין שיחת היכרות חינם</span>
         <span>דיסקרטיות מלאה</span>
         <span>תשובה תוך 24 שעות</span>
       </div>
@@ -872,8 +923,8 @@
 </footer>
 
 <script>
-  /* PALETTE — default to cosmos for therapeutic depth */
-  document.documentElement.setAttribute("data-palette", "cosmos");
+  /* PALETTE — רויאל · טורקיז · עומק חי */
+  document.documentElement.setAttribute("data-palette", "lagoon");
 
   /* STARS */
   const starsEl = document.getElementById("stars");
