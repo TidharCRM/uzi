@@ -370,6 +370,11 @@
     background:var(--accent);color:var(--bg-0);
     display:grid;place-items:center;flex-shrink:0;font-size:13px;font-weight:600;
   }
+  /* AUDIENCE acting as HERO */
+  .audience-hero h1{max-width:14ch}
+  .audience-hero .lede{margin-bottom:48px}
+  .audience-hero .audience-list{margin:0 auto 48px;text-align:right}
+  .audience-hero .audience-row{text-align:right}
 
   /* ---------- FLOW (4 STEPS) ---------- */
   .flow-head{text-align:center;margin-bottom:80px}
@@ -455,6 +460,77 @@
   }
   .faq-item[open] .faq-toggle{transform:rotate(45deg);background:var(--accent);color:var(--bg-0);border-color:var(--accent)}
   .faq-answer{padding-top:18px;color:var(--ink-soft);font-size:15px;max-width:62ch;line-height:1.75}
+
+  /* ---------- FORM ---------- */
+  .form-section{padding:140px 0}
+  .form-head{text-align:center;margin-bottom:60px}
+  .form-head h2{
+    font-family:"Mamilla",serif;font-weight:500;
+    font-size:clamp(34px,4vw,56px);line-height:1.15;margin:0 auto;max-width:22ch;letter-spacing:-.01em;
+  }
+  .form-head h2 em{font-style:italic;color:var(--accent)}
+  .form-head p{color:var(--ink-soft);max-width:60ch;margin:24px auto 0;font-size:17px;line-height:1.75}
+  .contact-form{
+    max-width:760px;margin:0 auto;
+    border:1px solid var(--line);border-radius:24px;
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+    padding:48px 40px;
+    display:grid;gap:36px;
+  }
+  .form-field{border:none;padding:0;margin:0}
+  .form-field > label,
+  .form-field > legend{
+    display:block;
+    font-family:"Mamilla",serif;font-weight:500;font-size:18px;
+    margin-bottom:14px;color:var(--ink);letter-spacing:-.005em;padding:0;
+  }
+  .form-field .req{color:var(--accent);font-size:14px;margin-inline-start:4px}
+  .contact-form input[type="text"],
+  .contact-form input[type="tel"],
+  .contact-form textarea{
+    width:100%;
+    padding:14px 18px;border:1px solid var(--line);border-radius:12px;
+    background:rgba(255,255,255,.02);color:var(--ink);
+    font-family:inherit;font-size:15px;transition:.3s;
+    direction:rtl;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus{outline:none;border-color:var(--accent);background:rgba(255,255,255,.05)}
+  .radio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .radio-grid label{
+    display:flex;align-items:center;gap:10px;
+    padding:12px 16px;border:1px solid var(--line);border-radius:12px;
+    background:rgba(255,255,255,.02);
+    cursor:pointer;transition:.3s;font-size:14px;color:var(--ink-soft);
+  }
+  .radio-grid label:hover{border-color:var(--accent);color:var(--ink)}
+  .radio-grid input[type="radio"]{accent-color:var(--accent);margin:0;cursor:pointer;flex-shrink:0}
+  .radio-grid label:has(input:checked){
+    border-color:var(--accent);
+    background:color-mix(in srgb, var(--accent) 14%, transparent);
+    color:var(--ink);
+  }
+  .detail-input{margin-top:12px}
+  .form-submit{display:flex;justify-content:center;margin-top:8px}
+  .form-submit .btn{font-size:16px}
+  .form-note{
+    text-align:center;color:var(--ink-dim);font-size:13px;margin-top:18px;
+  }
+  .post-submit{
+    display:none;max-width:640px;margin:32px auto 0;text-align:center;
+    padding:36px 28px;border:1px solid var(--accent);border-radius:20px;
+    background:color-mix(in srgb, var(--accent) 8%, transparent);
+  }
+  .post-submit h3{
+    font-family:"Mamilla",serif;font-weight:500;font-size:26px;margin:0 0 12px;color:var(--ink);
+    letter-spacing:-.005em;
+  }
+  .post-submit p{color:var(--ink-soft);margin:0 0 28px;font-size:15px;line-height:1.7}
+  .post-submit-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  @media (max-width:640px){
+    .contact-form{padding:32px 22px}
+    .radio-grid{grid-template-columns:1fr}
+  }
 
   /* ---------- FINAL CTA ---------- */
   .final-cta{position:relative;text-align:center}
@@ -542,35 +618,35 @@
     <div class="logo-text">עוזי בראל<br><span class="sub">התמכרויות · משברי חיים</span></div>
   </div>
   <ul>
+    <li><a href="#about">עליי</a></li>
     <li><a href="#pain">אם הגעת לכאן</a></li>
     <li><a href="#method">השיטות</a></li>
-    <li><a href="#flow">תהליך</a></li>
-    <li><a href="#about">עליי</a></li>
     <li><a href="#faq">שאלות</a></li>
+    <li><a href="#form">שאלון</a></li>
   </ul>
-  <a href="https://wa.me/972547000609?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%95%D7%96%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%AA%D7%99%D7%90%D7%95%D7%9D" target="_blank" rel="noopener" class="nav-cta plausible-event-name=Lead">פנייה בוואטסאפ ←</a>
+  <a href="#form" class="nav-cta plausible-event-name=Lead">למילוי השאלון ←</a>
 </nav>
 
-<!-- ========== HERO ========== -->
-<section class="hero">
+<!-- ========== AUDIENCE (HERO) ========== -->
+<section class="hero audience-hero">
   <div class="hero-orb"></div>
   <div class="wrap">
-    <div class="eyebrow mono">עוזי בראל · מכור נקי · מלווה מתוך ניסיון אישי</div>
-    <h1>
-      ההתמכרות, ההרס העצמי,<br>
-      טראומות ילדות שלא טופלו<br>
-      ומשברי החיים — <em>רק הענפים</em>.
-    </h1>
+    <div class="eyebrow mono" style="justify-content:center">למי זה מתאים</div>
+    <h1>זה <em>בשבילך</em> אם...</h1>
     <p class="lede">
-      <strong>השורש האמיתי יושב עמוק יותר.</strong> כל עוד לא מטפלים בשורש, אותם ענפים יצמחו מחדש שוב ושוב.
-      ההתמכרות יושבת עמוק יותר ממה שנראה מבחוץ — ואם לא מטפלים בבעיה מהשורש, אותם דפוסים יחזרו שוב ושוב, גם אם בכל פעם הם יופיעו אחרת.
+      הליווי שלי הוא לאנשים שכבר עברו את השלב של "אולי זה יעבור". שמוכנים לעבוד, לא רק לדבר.
     </p>
-    <p class="lede" style="margin-top:20px;max-width:58ch">
-      אני <strong>מכור נקי</strong>, עם ניסיון אישי אמיתי — כזה ש<strong>עבר דרך וגם ממשיך לעבור תהליכים בעצמי</strong>, לא רק מלווה אותם מעל הקו. זה חלק מרכזי בחיבור שלי לתחום וביכולת <strong>ללוות אנשים מהמקום הזה</strong> — עם כל שכבות העץ: הפיזית, הנפשית והרוחנית.
-    </p>
+    <div class="audience-list">
+      <div class="audience-row"><div class="mark">✓</div><div>אתה מתמודד עם התמכרות לחומרים, אלכוהול, הימורים, מסכים או יחסים — וכבר ניסית להפסיק לבד.</div></div>
+      <div class="audience-row"><div class="mark">✓</div><div>אתה בתוך משבר חיים — פרידה, אבל, פיטורים, הורות — ומרגיש שאתה לא מצליח לצאת.</div></div>
+      <div class="audience-row"><div class="mark">✓</div><div>בן או בת הזוג שלך נמצאים בתוך התמכרות, ואתם מחפשים דרך לעבור את זה יחד.</div></div>
+      <div class="audience-row"><div class="mark">✓</div><div>אתה מרגיש "תקוע" בדפוסים שחוזרים — כועס, חרד, מתבודד — בלי לדעת איך לשבור אותם.</div></div>
+      <div class="audience-row"><div class="mark">✓</div><div>אתה רוצה ליווי שמדבר אליך כאדם, לא כתיק, לא כאבחנה.</div></div>
+      <div class="audience-row"><div class="mark">✓</div><div>אתה מוכן לעבוד — לא רק לדבר. ולעשות את זה בקצב שלך, לא בקצב של מערכת.</div></div>
+    </div>
     <div class="hero-cta-row">
-      <a href="https://wa.me/972547000609?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%95%D7%96%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%AA%D7%99%D7%90%D7%95%D7%9D" target="_blank" rel="noopener" class="btn btn-primary plausible-event-name=Lead">
-        <span>שלחו הודעה בוואטסאפ</span>
+      <a href="#form" class="btn btn-primary plausible-event-name=Lead">
+        <span>למילוי שאלון קצר לפני שיחה</span>
         <span class="arrow">←</span>
       </a>
       <div class="stat-pill">
@@ -580,8 +656,42 @@
     </div>
     <div class="hero-meta">
       <span>יחידים · זוגות · משפחות</span>
-      <span>פנייה ראשונית בוואטסאפ בלבד</span>
-      <span>אין שיחת היכרות חינם</span>
+      <span>שאלון קצר לפני יצירת קשר</span>
+      <span>שיחה קצרה ללא עלות</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo">
+        <div class="halo"></div>
+        <div class="ph">תמונה של עוזי<br><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)">להשלמה</span></div>
+        <div class="caption"><span>עוזי בראל · 2026</span></div>
+      </div>
+      <div>
+        <div class="eyebrow mono">מי זה עוזי</div>
+        <h2>מכור נקי.<br><em>מלווה מהשטח הפנימי.</em></h2>
+        <p>שמי עוזי בראל. אני <strong>מכור נקי</strong> — לא תיאוריה מהספרים אלא חיים שעוברים דרך הגוף. אני ממשיך לעבור תהליכים בעצמי, וזה משהו שאני לא מסתיר: זה מניע אותי וזה נותן לי יכולת אמיתית ללוות אנשים <strong>מהמקום הזה</strong>, לא מלמעלה.</p>
+        <p>אני מלווה אנשים שמתמודדים עם התמכרויות, משברי חיים וטראומות שלא מרפות. למדתי NLP, התמחיתי ב-CBT, התעמקתי בריברסינג, בעבודת הילד הפנימי, בפסיכותרפיה וטיפול ממוקד, בעבודה עם שנים-עשר הצעדים, באימון אישי ובהנחיית קבוצות. כל כלי לימד אותי משהו אחר — וביחד הם מאפשרים לי לגעת בשורש ולא רק בענף.</p>
+        <p>מעבר לכל הכלים — מה שאני מביא לחדר הוא ההבנה שמולך יושב אדם, לא אבחנה. שיש לך סיפור, וכואב לך, ואתה רוצה משהו אחר. <strong>השאלה היחידה שצריך לענות עליה עכשיו היא — האם אתה מוכן.</strong></p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="n">8+</div>
+            <div class="l">כיווני טיפול וליווי</div>
+          </div>
+          <div class="about-stat">
+            <div class="n">3</div>
+            <div class="l">קהלים — יחידים, זוגות, משפחות</div>
+          </div>
+          <div class="about-stat">
+            <div class="n">100%</div>
+            <div class="l">דיסקרטיות · בלי שיפוט</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -719,120 +829,6 @@
   </div>
 </section>
 
-<!-- ========== QUOTE ========== -->
-<section class="quote">
-  <div class="wrap">
-    <blockquote>
-      ההתמכרות היא הניסיון של הנפש לטפל בכאב. כשמטפלים בכאב — ההתמכרות מפסיקה לעבוד.
-      <cite>— עוזי בראל</cite>
-    </blockquote>
-  </div>
-</section>
-
-<!-- ========== BIG STAT ========== -->
-<section class="big-stat">
-  <div class="wrap">
-    <div class="big-stat-grid">
-      <div class="big-stat-num">8</div>
-      <div class="big-stat-text">
-        <div class="eyebrow mono">מגוון כלים מוכחים</div>
-        <h2>פסיכותרפיה · CBT · NLP · ריברסינג ·<br>הילד הפנימי · <em>ועוד</em></h2>
-        <p>יחד עם טיפול ממוקד בהתמכרויות וטראומה, עבודה בתוך מסגרת שנים-עשר הצעדים כשמתאים, אימון אישי והנחיית קבוצות — אפשר לגשת לאדם שלם, לא רק לסימפטום שמטריד היום. השילוב נבחר לפי מי שאתה ולפי השורש, לא לפי אופנה.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== AUDIENCE ========== -->
-<section class="audience">
-  <div class="wrap">
-    <div class="audience-head">
-      <div class="eyebrow mono" style="justify-content:center">למי זה מתאים</div>
-      <h2>זה <em>בשבילך</em> אם...</h2>
-      <p>הליווי שלי הוא לאנשים שכבר עברו את השלב של "אולי זה יעבור". שמוכנים לעבוד, לא רק לדבר.</p>
-    </div>
-    <div class="audience-list">
-      <div class="audience-row"><div class="mark">✓</div><div>אתה מתמודד עם התמכרות לחומרים, אלכוהול, הימורים, מסכים או יחסים — וכבר ניסית להפסיק לבד.</div></div>
-      <div class="audience-row"><div class="mark">✓</div><div>אתה בתוך משבר חיים — פרידה, אבל, פיטורים, הורות — ומרגיש שאתה לא מצליח לצאת.</div></div>
-      <div class="audience-row"><div class="mark">✓</div><div>בן או בת הזוג שלך נמצאים בתוך התמכרות, ואתם מחפשים דרך לעבור את זה יחד.</div></div>
-      <div class="audience-row"><div class="mark">✓</div><div>אתה מרגיש "תקוע" בדפוסים שחוזרים — כועס, חרד, מתבודד — בלי לדעת איך לשבור אותם.</div></div>
-      <div class="audience-row"><div class="mark">✓</div><div>אתה רוצה ליווי שמדבר אליך כאדם, לא כתיק, לא כאבחנה.</div></div>
-      <div class="audience-row"><div class="mark">✓</div><div>אתה מוכן לעבוד — לא רק לדבר. ולעשות את זה בקצב שלך, לא בקצב של מערכת.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FLOW ========== -->
-<section class="flow" id="flow">
-  <div class="wrap">
-    <div class="flow-head">
-      <div class="eyebrow mono" style="justify-content:center">איך נראה תהליך הליווי</div>
-      <h2>ארבעה שלבים <em>ברורים</em> —<br>בלי הפתעות, בלי לחץ, בקצב שלך.</h2>
-      <p>כל מטופל מקבל תהליך אישי. אין כאן תבנית — יש כאן עבודה. <strong>הפנייה הראשונית</strong> מתבצעת בוואטסאפ בלבד.</p>
-    </div>
-    <div class="flow-steps">
-      <div class="step">
-        <div class="step-glyph"></div>
-        <div class="step-num">שלב 01</div>
-        <h3>פנייה ראשונית בוואטסאפ</h3>
-        <p>הפנייה הראשונית נעשית בוואטסאפ בלבד — קצרה, ישירה, בלי טפסים ושאלוני אבחון. חשוב לי שזה יהיה ברור: <strong>אין שיחת היכרות חינם</strong>. אחרי ההודעה נתקדם לתיאום פגישה בתשלום ולתהליך, כשזה מתאים לשני הצדדים. אם אני לא האדם הנכון בשבילך — אגיד לך את זה ישר.</p>
-      </div>
-      <div class="step">
-        <div class="step-glyph"></div>
-        <div class="step-num">שלב 02</div>
-        <h3>פגישה ראשונה</h3>
-        <p>פגישה פרונטלית או אונליין. מבינים יחד מה הכלי הראשון שמתאים — CBT, NLP, פסיכותרפיה, ריברסינג, הילד הפנימי, מסגרת שנים-עשר הצעדים, אימון אישי או קבוצה — ובונים את צורת העבודה שלך.</p>
-      </div>
-      <div class="step">
-        <div class="step-glyph"></div>
-        <div class="step-num">שלב 03</div>
-        <h3>תהליך מותאם</h3>
-        <p>פגישות קבועות, שילוב של שיטות לפי הצורך, ועבודה ביתית קלה בין הפגישות. רוב המטופלים מרגישים שינוי משמעותי תוך 8–12 פגישות.</p>
-      </div>
-      <div class="step">
-        <div class="step-glyph"></div>
-        <div class="step-num">שלב 04</div>
-        <h3>יציאה לדרך עצמאית</h3>
-        <p>המטרה היא לא ליצור תלות. המטרה היא שיצא ממך תהליך — עם כלים אמיתיים שנשארים איתך, ועם תחושה שיש לך גישה לעצמך.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== ABOUT ========== -->
-<section class="about" id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="about-photo">
-        <div class="halo"></div>
-        <div class="ph">תמונה של עוזי<br><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)">להשלמה</span></div>
-        <div class="caption"><span>עוזי בראל · 2026</span></div>
-      </div>
-      <div>
-        <div class="eyebrow mono">מי זה עוזי</div>
-        <h2>מכור נקי.<br><em>מלווה מהשטח הפנימי.</em></h2>
-        <p>שמי עוזי בראל. אני <strong>מכור נקי</strong> — לא תיאוריה מהספרים אלא חיים שעוברים דרך הגוף. אני ממשיך לעבור תהליכים בעצמי, וזה משהו שאני לא מסתיר: זה מניע אותי וזה נותן לי יכולת אמיתית ללוות אנשים <strong>מהמקום הזה</strong>, לא מלמעלה.</p>
-        <p>אני מלווה אנשים שמתמודדים עם התמכרויות, משברי חיים וטראומות שלא מרפות. למדתי NLP, התמחיתי ב-CBT, התעמקתי בריברסינג, בעבודת הילד הפנימי, בפסיכותרפיה וטיפול ממוקד, בעבודה עם שנים-עשר הצעדים, באימון אישי ובהנחיית קבוצות. כל כלי לימד אותי משהו אחר — וביחד הם מאפשרים לי לגעת בשורש ולא רק בענף.</p>
-        <p>מעבר לכל הכלים — מה שאני מביא לחדר הוא ההבנה שמולך יושב אדם, לא אבחנה. שיש לך סיפור, וכואב לך, ואתה רוצה משהו אחר. <strong>השאלה היחידה שצריך לענות עליה עכשיו היא — האם אתה מוכן.</strong></p>
-        <div class="about-stats">
-          <div class="about-stat">
-            <div class="n">8+</div>
-            <div class="l">כיווני טיפול וליווי</div>
-          </div>
-          <div class="about-stat">
-            <div class="n">3</div>
-            <div class="l">קהלים — יחידים, זוגות, משפחות</div>
-          </div>
-          <div class="about-stat">
-            <div class="n">100%</div>
-            <div class="l">דיסקרטיות · בלי שיפוט</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="wrap">
@@ -840,7 +836,7 @@
       <div>
         <div class="eyebrow mono">שאלות נפוצות</div>
         <h2>שאלות שאנשים<br><em>באמת</em> שואלים.</h2>
-        <p style="color:var(--ink-soft);margin-top:20px;font-size:15px">לא מצאת תשובה? שלח הודעה בוואטסאפ — ואחזור אליך תוך 24 שעות.</p>
+        <p style="color:var(--ink-soft);margin-top:20px;font-size:15px">לא מצאת תשובה? <a href="#form" style="color:var(--accent);text-decoration:underline">מלא את השאלון הקצר</a> ואחזור אליך תוך 24 שעות.</p>
       </div>
       <div class="faq-list">
         <details class="faq-item" open>
@@ -848,8 +844,8 @@
           <div class="faq-answer">לחלוטין. כל מה שנאמר בחדר נשאר בחדר. דיסקרטיות מלאה היא תנאי בסיס לכל תהליך — ובמיוחד כשמדובר בנושאים רגישים כמו התמכרות, יחסים זוגיים או משברים אישיים.</div>
         </details>
         <details class="faq-item">
-          <summary><h3>האם יש שיחת היכרות חינם?</h3><span class="faq-toggle">+</span></summary>
-          <div class="faq-answer">לא. חשוב לי שזה יהיה שקוף מההתחלה. <strong>אין שיחת היכרות חינם.</strong> הפנייה הראשונית נעשית בוואטסאפ בלבד, ומשם — אם יש התאמה — מתקדמים לתיאום פגישה בתשלום ולתהליך.</div>
+          <summary><h3>האם יש שיחת היכרות ראשונית?</h3><span class="faq-toggle">+</span></summary>
+          <div class="faq-answer">כן. הפנייה הראשונית מתחילה ב<strong>שאלון קצר</strong> שנמצא באתר. אחרי המילוי אפשר להתקשר או לשלוח הודעה בוואטסאפ — והשיחה הראשונה היא <strong>שיחה קצרה ללא עלות</strong>, כדי שנוכל להבין יחד אם יש התאמה. אם כן — מתקדמים לתיאום פגישה בתשלום ולתהליך.</div>
         </details>
         <details class="faq-item">
           <summary><h3>אני בכלל לא בטוח שזו "התמכרות" — זה עדיין רלוונטי?</h3><span class="faq-toggle">+</span></summary>
@@ -877,8 +873,102 @@
         </details>
         <details class="faq-item">
           <summary><h3>איך מתחילים?</h3><span class="faq-toggle">+</span></summary>
-          <div class="faq-answer">שולחים לי <strong>הודעה בוואטסאפ בלבד</strong> — כך אני מנהל את הפנייה הראשונית. אחזור תוך עד 24 שעות, נסכם את המשך הדרך, ואם יש התאמה נקבע פגישה בתשלום. <strong>אין שיחת היכרות חינם.</strong> משם אתה מחליט איך להמשיך.</div>
+          <div class="faq-answer">ממלאים את ה<strong>שאלון הקצר באתר</strong> — זה תנאי לפני התקשרות או שליחת הודעה. השאלון לוקח 2 דקות ועוזר לי להבין מי על הקו. בסיום אפשר לשלוח את התשובות בוואטסאפ או להתקשר. אם לא אענה, אחזור תוך עד 24 שעות. נסכם את המשך הדרך, ואם יש התאמה נקבע פגישה בתשלום.</div>
         </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FORM ========== -->
+<section class="form-section" id="form">
+  <div class="wrap">
+    <div class="form-head">
+      <div class="eyebrow mono" style="justify-content:center">לפני יצירת קשר</div>
+      <h2>שאלון <em>קצר</em>, ואז מתקשרים.</h2>
+      <p>כדי לכבד את הזמן של שנינו ולהבין אם יש התאמה — מילוי השאלון הוא <strong>תנאי לפני התקשרות או שליחת הודעה בוואטסאפ</strong>. התשובות יעזרו לי להגיע לשיחה כשאני כבר מבין את התמונה.</p>
+    </div>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="form-field">
+        <label for="f-name">שם מלא <span class="req">*</span></label>
+        <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="שם פרטי ומשפחה" />
+      </div>
+
+      <fieldset class="form-field">
+        <legend>גיל <span class="req">*</span></legend>
+        <div class="radio-grid">
+          <label><input type="radio" name="age" value="18-25" required /><span>18-25</span></label>
+          <label><input type="radio" name="age" value="26-35" /><span>26-35</span></label>
+          <label><input type="radio" name="age" value="36-45" /><span>36-45</span></label>
+          <label><input type="radio" name="age" value="46-55" /><span>46-55</span></label>
+          <label><input type="radio" name="age" value="56+" /><span>56+</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-field">
+        <legend>מה ההתמכרות / הקושי <span class="req">*</span></legend>
+        <div class="radio-grid">
+          <label><input type="radio" name="addiction" value="סמים" required /><span>סמים</span></label>
+          <label><input type="radio" name="addiction" value="אלכוהול" /><span>אלכוהול</span></label>
+          <label><input type="radio" name="addiction" value="הימורים" /><span>הימורים</span></label>
+          <label><input type="radio" name="addiction" value="מסכים / דיגיטל" /><span>מסכים / דיגיטל</span></label>
+          <label><input type="radio" name="addiction" value="אוכל" /><span>אוכל</span></label>
+          <label><input type="radio" name="addiction" value="יחסים" /><span>יחסים</span></label>
+          <label><input type="radio" name="addiction" value="עבודה" /><span>עבודה</span></label>
+          <label><input type="radio" name="addiction" value="משבר חיים" /><span>משבר חיים</span></label>
+          <label><input type="radio" name="addiction" value="אחר" /><span>אחר</span></label>
+        </div>
+        <input type="text" name="addictionDetails" class="detail-input" placeholder="פרט יותר (אופציונלי)" />
+      </fieldset>
+
+      <fieldset class="form-field">
+        <legend>כמה זמן זה איתך <span class="req">*</span></legend>
+        <div class="radio-grid">
+          <label><input type="radio" name="duration" value="פחות משנה" required /><span>פחות משנה</span></label>
+          <label><input type="radio" name="duration" value="1-3 שנים" /><span>1-3 שנים</span></label>
+          <label><input type="radio" name="duration" value="3-5 שנים" /><span>3-5 שנים</span></label>
+          <label><input type="radio" name="duration" value="5-10 שנים" /><span>5-10 שנים</span></label>
+          <label><input type="radio" name="duration" value="יותר מ-10 שנים" /><span>יותר מ-10 שנים</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-field">
+        <legend>מה גרם לך לפנות עכשיו לטיפול <span class="req">*</span></legend>
+        <div class="radio-grid">
+          <label><input type="radio" name="reason" value="משבר משפחתי / זוגי" required /><span>משבר משפחתי / זוגי</span></label>
+          <label><input type="radio" name="reason" value="קשיים בעבודה / קריירה" /><span>קשיים בעבודה / קריירה</span></label>
+          <label><input type="radio" name="reason" value="בעיה בריאותית" /><span>בעיה בריאותית</span></label>
+          <label><input type="radio" name="reason" value="רצון פנימי לשינוי" /><span>רצון פנימי לשינוי</span></label>
+          <label><input type="radio" name="reason" value="פגיעה במישהו קרוב" /><span>פגיעה במישהו קרוב</span></label>
+          <label><input type="radio" name="reason" value="הגעתי לתחתית" /><span>הגעתי לתחתית</span></label>
+          <label><input type="radio" name="reason" value="לחץ מהמשפחה / הקרובים" /><span>לחץ מהמשפחה / הקרובים</span></label>
+          <label><input type="radio" name="reason" value="אחר" /><span>אחר</span></label>
+        </div>
+        <textarea name="reasonDetails" class="detail-input" rows="2" placeholder="פרט יותר (אופציונלי)"></textarea>
+      </fieldset>
+
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary plausible-event-name=Lead">
+          <span>שלח שאלון</span>
+          <span class="arrow">←</span>
+        </button>
+      </div>
+      <div class="form-note">דיסקרטיות מלאה · התשובות מגיעות אליי בלבד</div>
+    </form>
+
+    <div class="post-submit" id="postSubmit">
+      <h3>תודה — השאלון מוכן.</h3>
+      <p>בחר/י איך נוח לשלוח אליי את התשובות. אחזור אליך בהקדם, וכשנדבר זה כבר יהיה ממקום של הבנה הדדית.</p>
+      <div class="post-submit-actions">
+        <a id="waLink" href="#" target="_blank" rel="noopener" class="btn btn-primary plausible-event-name=Lead">
+          <span>שלח בוואטסאפ</span>
+          <span class="arrow">←</span>
+        </a>
+        <a href="tel:+972547000609" class="btn btn-ghost plausible-event-name=Lead">
+          <span>התקשר עכשיו · 054-700-0609</span>
+          <span class="arrow">←</span>
+        </a>
       </div>
     </div>
   </div>
@@ -890,14 +980,14 @@
     <div class="final-box">
       <div class="eyebrow mono" style="justify-content:center">הצעד הראשון</div>
       <h2>לא צריך לעשות את זה<br><em>לבד</em>.</h2>
-      <p>שלחו הודעה בוואטסאפ — זו דרך <strong>הפנייה הראשונית</strong> שלי. אחזור אליך תוך עד 24 שעות, נסכם את ההמשך, ואם יש התאמה נקבע פגישה בתשלום. <strong>אין שיחת היכרות חינם.</strong> דיסקרטיות מלאה; אין התחייבות עד שמתאמים פגישה.</p>
-      <a href="https://wa.me/972547000609?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%95%D7%96%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%AA%D7%99%D7%90%D7%95%D7%9D" target="_blank" rel="noopener" class="btn btn-primary plausible-event-name=Lead">
-        <span>שלח הודעה בוואטסאפ</span>
+      <p>הצעד הראשון הוא <strong>מילוי השאלון הקצר</strong>. זו דרך הפנייה הראשונית שלי — אחריה אפשר להתקשר או לשלוח הודעה בוואטסאפ. אחזור אליך בהקדם, נסכם את ההמשך, ואם יש התאמה נקבע פגישה בתשלום. דיסקרטיות מלאה; אין התחייבות עד שמתאמים פגישה.</p>
+      <a href="#form" class="btn btn-primary plausible-event-name=Lead">
+        <span>למילוי השאלון</span>
         <span class="arrow">←</span>
       </a>
       <div class="final-trust">
-        <span>פנייה ראשונית בוואטסאפ</span>
-        <span>אין שיחת היכרות חינם</span>
+        <span>שאלון קצר לפני שיחה</span>
+        <span>שיחה קצרה ללא עלות</span>
         <span>דיסקרטיות מלאה</span>
         <span>תשובה תוך 24 שעות</span>
       </div>
@@ -908,10 +998,9 @@
 <footer>
   <div class="logo">
     <div class="logo-mark">עב</div>
-    <div class="logo-text">עוזי בראל · התמכרויות ומשברי חיים</div>
+    <div class="logo-text">עוזי בראל · מטפל בהתמכרויות ומשברי חיים</div>
   </div>
   <div class="socials">
-    <a href="https://wa.me/972547000609" target="_blank" rel="noopener">וואטסאפ</a>
     <a href="tel:+972547000609" class="phone-link">054-700-0609</a>
   </div>
   <div>© 2026 · עוזי בראל</div>
@@ -951,6 +1040,46 @@
       }
     });
   });
+
+  /* CONTACT FORM SUBMIT */
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+      const data = new FormData(contactForm);
+      const get = (k) => (data.get(k) || "").toString().trim();
+      const name = get("name");
+      const age = get("age");
+      const addiction = get("addiction");
+      const addictionDetails = get("addictionDetails");
+      const duration = get("duration");
+      const reason = get("reason");
+      const reasonDetails = get("reasonDetails");
+
+      let msg = "היי עוזי, מילאתי את השאלון באתר:\n\n";
+      msg += "שם: " + name + "\n";
+      msg += "גיל: " + age + "\n";
+      msg += "התמכרות / קושי: " + addiction + (addictionDetails ? " — " + addictionDetails : "") + "\n";
+      msg += "כמה זמן: " + duration + "\n";
+      msg += "מה גרם לי לפנות: " + reason + (reasonDetails ? " — " + reasonDetails : "") + "\n\n";
+      msg += "אשמח שתחזור אליי.";
+
+      const waUrl = "https://wa.me/972547000609?text=" + encodeURIComponent(msg);
+      const waLink = document.getElementById("waLink");
+      if (waLink) waLink.setAttribute("href", waUrl);
+
+      contactForm.style.display = "none";
+      const post = document.getElementById("postSubmit");
+      if (post) {
+        post.style.display = "block";
+        post.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    });
+  }
 </script>
 
 </body>
